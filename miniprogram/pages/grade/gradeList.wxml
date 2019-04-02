@@ -1,0 +1,55 @@
+<view class="weui-cells weui-cells_form">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">只显示总成绩不及格学生</view>
+    <view class="weui-cell__ft">
+      <switch  bindchange="switchChange" />
+    </view>
+  </view>
+</view>
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <text class="placeholder">期末成绩占比</text>
+      </view>
+      <view class="weui-flex__item">
+        <input class="placeholder" type='number' bindinput='rateInpute' placeholder='{{rate}}'></input>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <text class="placeholder">姓名</text>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">平时成绩</view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">期末成绩</view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">总成绩</view>
+      </view>
+    </view>
+  </view>
+  <view wx:for='{{gradeArray}}' wx:for-item='item' wx:key='_id' wx:for-index='index'>
+    <view class="page__bd page__bd_spacing" >
+      <view class="weui-flex" hidden='{{item.total_grade>=60?flag:false}}'>
+        <view class="weui-flex__item">
+          <view class="placeholder">{{item.student_name}}</view>
+        </view>
+        <view class="weui-flex__item">
+          <input id='{{index}}' class="placeholder" type='number' bindinput='regular_gradeInput' placeholder='{{item.regular_grade}}'></input>
+        </view>
+        <view class="weui-flex__item">
+          <input id='{{index}}' class="placeholder" type='number' bindinput='final_gradeInput' placeholder='{{item.final_grade}}'></input>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">{{item.total_grade}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <button class='weui-btn weui-btn_primary' bindtap='clickButton'>保存并提交</button>
+  </view>

@@ -1,0 +1,24 @@
+<view class="userinfo">
+  <view class="userinfo-avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+    <open-data type="userNickName"></open-data>
+</view>
+<view class="weui-cells__title">请先完成教师认证</view>
+<view class="weui-cells weui-cells_form">
+            <view class="weui-cell">
+                <view class="weui-cell__hd"><label class="weui-label">工号</label></view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入工号" bindinput='numInput'/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_vcode">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">姓名</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type="tel" placeholder="请输入姓名" bindinput='nameInput'/>
+                </view>
+            </view>
+            <button class='weui-btn weui-btn_primary' bindtap='clickButton'>提交</button>
+        </view>
