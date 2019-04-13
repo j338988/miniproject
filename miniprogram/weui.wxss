@@ -649,7 +649,7 @@ input.weui-btn_plain-default{
 }
 .weui-form-preview__hd{
   position:relative;
-  padding:10px 15px;
+  padding:5px 15px;
   text-align:right;
   line-height:2.5em;
 }
@@ -705,9 +705,9 @@ input.weui-btn_plain-default{
 }
 .weui-form-preview__label{
   float:left;
-  margin-right:1em;
+  
   min-width:4em;
-  color:#999999;
+  color:#000;
   text-align:justify;
   text-align-last:justify;
 }

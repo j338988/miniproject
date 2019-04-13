@@ -1,0 +1,12 @@
+<view class='mystyle'>{{studentName}} </view>
+<view class='myview'>{{studentNum}}</view>
+<view class="button-sp-area">
+  <button class="weui-btn weui-btn_plain-primary" hidden='{{flag?false:true}}' bindtap='randompick'>随机抽点</button>
+  <button class="weui-btn weui-btn_plain-primary" hidden='{{flag?false:true}}' bindtap='orderpick'>全班点名</button>
+   <button class="weui-btn weui-btn_plain-primary" hidden='{{flag?false:true}}' bindtap='attendRecord'>考勤记录</button>
+  <button class="weui-btn weui-btn_plain-primary" hidden='{{flag}}' bindtap='late'>迟到</button>
+  <button class="weui-btn weui-btn_plain-primary" hidden='{{flag}}' bindtap='truancy'>旷课</button>
+  <button class="weui-btn weui-btn_plain-primary" hidden='{{flag}}' bindtap='leave'>请假</button>
+  <button class="weui-btn weui-btn_plain-primary" hidden='{{flag}}' bindtap='getNext'>下一个</button>
+  <button class="weui-btn weui-btn_plain-primary" hidden='{{flag}}' bindtap='quitButton'>退出</button>
+</view>

@@ -1,0 +1,20 @@
+<view wx:for="{{arr}}" wx:key="{{index}}" wx:for-item='item'>
+  <view class="weui-form-preview">
+    <view class="weui-form-preview__hd">
+      <view class="weui-form-preview__item">
+        <label class="weui-form-preview__label">{{index+1}}、标题</label>
+        <em class="weui-form-preview__value">{{item.title}}</em>
+      </view>
+    </view>
+    <view class="weui-form-preview__bd">
+      <view class="weui-form-preview__item">
+        <label class="weui-form-preview__label">时间</label>
+        <span class="weui-form-preview__value">{{item.send_date}}</span>
+      </view>
+      <view class="weui-form-preview__item">
+        <label class="weui-form-preview__label">内容</label>
+      </view>
+    </view>
+     <view style=' word-break: break-all;padding:0px 15px'>{{item.text}}</view>
+  </view>
+</view>

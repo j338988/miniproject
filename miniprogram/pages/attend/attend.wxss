@@ -1,0 +1,19 @@
+/* miniprogram/pages/attend/attend.wxss */
+.mystyle{
+  font-size: 150rpx;
+  width: 750rpx;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.myview{
+  font-size: 100rpx;
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

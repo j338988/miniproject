@@ -39,7 +39,7 @@
           <view class="placeholder">{{item.student_name}}</view>
         </view>
         <view class="weui-flex__item">
-          <input id='{{index}}' class="placeholder" type='number' bindinput='regular_gradeInput' placeholder='{{item.regular_grade}}'></input>
+          <input id='{{index}}'  class="placeholder" type='number' bindinput='regular_gradeInput' placeholder='{{item.regular_grade}}'></input>
         </view>
         <view class="weui-flex__item">
           <input id='{{index}}' class="placeholder" type='number' bindinput='final_gradeInput' placeholder='{{item.final_grade}}'></input>
@@ -51,5 +51,8 @@
     </view>
   </view>
   <view>
-    <button class='weui-btn weui-btn_primary' bindtap='clickButton'>保存并提交</button>
+    <button class='weui-btn weui-btn_plain-primary' bindtap='clickButton2'>刷新成绩</button>
+  </view>
+  <view>
+    <button class='weui-btn weui-btn_plain-primary' bindtap='clickButton'>保存并提交</button>
   </view>

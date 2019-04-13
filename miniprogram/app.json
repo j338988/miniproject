@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -11,8 +10,14 @@
     "pages/news/news",
     "pages/error/loginerror",
     "pages/gradecenter/gradecenter",
+    "pages/grade/gradeList",
+    "pages/attend/attend",
+    "pages/attendRecord/attendRecord",
     "pages/attendcenter/attendcenter",
-    "pages/grade/gradeList"
+    "pages/index/index",
+    "pages/messageRecord/messageRecord",
+    "pages/messageList/messageList",
+    "pages/sendMail/sendMail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -25,16 +30,16 @@
     "selectedColor": "#1AAD16",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "校内新闻",
+        "pagePath": "pages/messageList/messageList",
+        "text": "消息推送",
         "iconPath": "images/news.png",
         "selectedIconPath": "images/news_s.png"
       },
       {
         "pagePath": "pages/attendcenter/attendcenter",
-        "text": "课堂点名",
-        "iconPath": "images/star.png",
-        "selectedIconPath": "images/star_s.png"
+        "text": "考勤管理",
+        "iconPath": "images/news.png",
+        "selectedIconPath": "images/news_s.png"
       },
       {
         "pagePath": "pages/gradecenter/gradecenter",

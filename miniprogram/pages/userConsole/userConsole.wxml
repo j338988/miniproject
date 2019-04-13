@@ -1,4 +1,4 @@
-<!--pages/userConsole/userConsole.wxml-->
+<!--pages/userConsole/userConsole.wxml
 <view class="container">
 
   <view class="list">
@@ -10,7 +10,7 @@
     </view>
   </view>
 
-  <!-- 云开发用户管理指引 -->
+  <!-- 云开发用户管理指引 
   <view class="guide">
     <text class="headline">云开发管理用户</text>
     <text class="p">1. 打开云开发控制台</text>
@@ -20,3 +20,4 @@
   </view>
 
 </view>
+-->

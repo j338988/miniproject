@@ -4,6 +4,15 @@ Page({
   /**
    * 页面的初始数据
    */
+  //刷新成绩
+  clickButton2:function(e){
+    for (let index in this.data.gradeArray) {
+      var total_grade = 'gradeArray[' + index + '].total_grade'
+      this.setData({
+        [total_grade]: this.data.gradeArray[index].regular_grade * (1 - this.data.rate) + this.data.gradeArray[index].final_grade * this.data.rate
+      })
+    }
+  },
   switchChange:function(e){
     this.setData({
       flag:e.detail.value
@@ -27,7 +36,7 @@ Page({
    
   },
   regular_gradeInput: function(e) {
-    this.data.gradeArray[e.currentTarget.id].regular_grade = e.detail.value
+    this.data.gradeArray[e.currentTarget.id].regular_grade = parseInt(e.detail.value)
     var total_grade = 'gradeArray[' + e.currentTarget.id +'].total_grade'
     this.setData({
      // [regular_grade]: e.detail.value,
@@ -35,7 +44,7 @@ Page({
     })
   },
   final_gradeInput: function(e) {
-    this.data.gradeArray[e.currentTarget.id].final_grade = e.detail.value
+    this.data.gradeArray[e.currentTarget.id].final_grade = parseInt(e.detail.value)
     /*this.data.gradeArray[e.currentTarget.id].total_grade = e.detail.value * (1 - this.data.rate) + this.data.gradeArray[e.currentTarget.id].final_grade * this.data.rate*/
     //var final_grade = 'gradeArray[' + e.currentTarget.id + '].final_grade'
     var total_grade = 'gradeArray[' + e.currentTarget.id + '].total_grade'
@@ -121,13 +130,14 @@ Page({
         console.error('[数据库] [查询记录] 失败：', err)
       },
     })
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    
   },
 
   /**

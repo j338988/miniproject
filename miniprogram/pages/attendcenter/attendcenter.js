@@ -1,18 +1,37 @@
 // pages/attendcenter/attendcenter.js
 Page({
-
+  onclick: function (e) {
+    console.log(e.currentTarget.id)
+    console.log(this.data.classArray[e.currentTarget.id])
+    wx.navigateTo({
+      url: '../../pages/attend/attend?class_id=' + this.data.classArray[e.currentTarget.id]._id + '&count=' + this.data.classArray[e.currentTarget.id].count
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
-
+    classArray: [{}],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var app = getApp();
+    var openid = app.globalData.openid;
 
+    const db = wx.cloud.database()
+    db.collection('class').where({ teacher_id: app.globalData.teacher_id }).get({
+      success: res => {
+        this.setData({
+          classArray: res.data
+        })
+      },
+      fail: err => {
+        console.error('[数据库] [查询记录] 失败：', err)
+      },
+    })
   },
 
   /**

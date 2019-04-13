@@ -1,0 +1,11 @@
+<view class="weui-cells__title">请选择班级</view>
+<view wx:for='{{classArray}}' wx:for-item='item' wx:key="_id">
+<view class="weui-cells">
+  <view class="weui-cell weui-cell_access" >
+    <view class="weui-cell__bd">
+      <view bindtap='onclick' id = "{{item._id}}" >{{item.class_name}}</view>
+    </view>
+<view class="weui-cell__ft"></view>
+  </view>
+</view>
+</view>
