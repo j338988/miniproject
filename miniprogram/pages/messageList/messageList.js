@@ -2,9 +2,8 @@
 Page({
 
   onclick: function (e) {
-    console.log(e._relatedInfo.anchorRelatedText)
     wx.navigateTo({
-      url: '../../pages/sendMail/sendMail?class_id=' + e.currentTarget.id + '&class_name=' + e._relatedInfo.anchorRelatedText
+      url: '../../pages/sendMail/sendMail?class_id=' + e.currentTarget.id 
     })
   },
   /**

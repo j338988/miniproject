@@ -16,7 +16,6 @@ Page({
       } else {
         const db = wx.cloud.database()
         var that = this
-        console.log(index)
         console.log(this.data)
         db.collection('grade').where({
           student_id: this.data.students[index]._id
@@ -129,6 +128,7 @@ Page({
             value: '请假'
           },
           success(res) {
+            console.log(res)
             wx.showToast({
               icon: 'none',
               title: '记录保存成功'

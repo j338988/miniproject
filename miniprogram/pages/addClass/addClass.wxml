@@ -1,0 +1,29 @@
+<view class="weui-cells__title">班级</view>
+<view class="weui-cells">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <input class="weui-input" type="text" placeholder="请输入班级" bindinput='classInpute' />
+    </view>
+  </view>
+</view>
+<view class="weui-cells__title">课程</view>
+<view class="weui-cells">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <input class="weui-input" type="text" placeholder="请输入课程名称" bindinput='courseInpute' />
+    </view>
+  </view>
+</view>
+<view class="weui-cells__title">任课教师</view>
+<view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData[index].teacher_name}}</text>
+        <text>▼</text>   
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item.teacher_name}}</text>
+    </view>
+</view>
+<view class="button-sp-area" >
+  <button class="weui-btn weui-btn_plain-primary" bindtap='onclick' style='position: fixed;bottom: 200rpx' >提交</button>
+</view>

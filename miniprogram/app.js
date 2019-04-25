@@ -24,11 +24,11 @@ App({
          console.log('[数据库] [查询记录] 成功: ',res.data)
          if(res.data.length != 0){
            //账号存在
-           console.log('2')
            if (res.data[0].value == 2) {
              this.globalData.teacher_num = res.data[0].teacher_num
              this.globalData.teacher_name = res.data[0].teacher_name
              this.globalData.teacher_id = res.data[0]._id
+             this.globalData.flag = true
              wx.switchTab({
                url: '../usercenter/usercenter'
              })
@@ -37,7 +37,16 @@ App({
                icon: 'none',
                title: '账号认证中，请稍后再试'
              })
-           } else {
+           } else if (res.data[0].value == 3){
+             console.log('333')
+             this.globalData.teacher_num = res.data[0].teacher_num
+             this.globalData.teacher_name = res.data[0].teacher_name
+             this.globalData.teacher_id = res.data[0]._id
+             this.globalData.flag = false
+             wx.switchTab({
+               url: '../usercenter/usercenter'
+             })
+           }else {
              wx.redirectTo({
                url: '../error/loginerror',
              })
@@ -58,8 +67,7 @@ App({
                console.error('[数据库] [新增记录] 失败：', err)
              }
            })
-         }
-         
+         }  
        },
           fail: err => {
          console.error('[数据库] [查询记录] 失败：', err)

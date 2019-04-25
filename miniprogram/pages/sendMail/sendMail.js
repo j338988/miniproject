@@ -64,7 +64,6 @@ Page({
    */
   data: {
     class_id:'',
-    class_name:'',
     title:'',
     text:'',
     students:[{}]
@@ -75,7 +74,6 @@ Page({
    */
   onLoad: function (options) {
     this.data.class_id = options.class_id
-    this.data.class_name = options.class_name
     var that = this
     const db = wx.cloud.database()
     db.collection('student').where({class_id:this.data.class_id}).get({

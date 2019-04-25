@@ -1,0 +1,11 @@
+<view class="weui-cells__title">以下为待认证教师名单</view>
+<view class="item-box">
+  <view class="items">
+    <view wx:for="{{arr}}" wx:key="{{index}}" class="item">
+      <view bindtouchstart="touchS"bindtouchmove="touchM"bindtouchend="touchE"data-index="{{index}}"style="{{item.txtStyle}}"class="inner txt">
+    {{index+1}}、 姓名：{{item.teacher_name}}    工号：{{item.teacher_num}} 
+     </view>
+      <view data-index="{{index}}"bindtap = "delItem"class="inner del">确认</view>
+    </view>
+  </view>
+</view>

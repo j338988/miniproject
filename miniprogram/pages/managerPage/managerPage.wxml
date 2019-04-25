@@ -1,0 +1,11 @@
+<view style='padding:30px 15px'>
+  <view class="button-sp-area" style='padding:10px 15px'>
+    <button class="weui-btn weui-btn_plain-primary" bindtap='onclick'>教师认证</button>
+  </view>
+   <view class="button-sp-area"style='padding:10px 15px'>
+    <button class="weui-btn weui-btn_plain-primary" bindtap='onclick1'>添加班级课程</button>
+  </view>
+   <view class="button-sp-area"style='padding:10px 15px'>
+    <button class="weui-btn weui-btn_plain-primary" bindtap='onclick2'>添加学生</button>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="weui-cells__title">学生姓名</view>
+<view class="weui-cells">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <input class="weui-input" type="text" placeholder="请输入学生姓名" bindinput='nameInpute' />
+    </view>
+  </view>
+</view>
+<view class="weui-cells__title">学生学号</view>
+<view class="weui-cells">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <input class="weui-input" type="number" placeholder="请输入学生学号" bindinput='numInpute' />
+    </view>
+  </view>
+</view>
+<view class="weui-cells__title">邮箱</view>
+<view class="weui-cells">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <input class="weui-input" type="text" placeholder="请输入邮箱" bindinput='mailInpute' />
+    </view>
+  </view>
+</view>
+<view class="weui-cells__title">请选择班级课程</view>
+<view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData[index].class_name}}</text>
+        <text>▼</text>   
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item.class_name}}</text>
+    </view>
+</view>
+<view class="button-sp-area" >
+  <button class="weui-btn weui-btn_plain-primary" bindtap='onclick' style='position: fixed;bottom: 200rpx' >提交</button>
+</view>

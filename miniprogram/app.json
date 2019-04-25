@@ -17,7 +17,11 @@
     "pages/index/index",
     "pages/messageRecord/messageRecord",
     "pages/messageList/messageList",
-    "pages/sendMail/sendMail"
+    "pages/sendMail/sendMail",
+    "pages/managerPage/managerPage",
+    "pages/teacherList/teacherList",
+    "pages/addClass/addClass",
+    "pages/addStudent/addStudent"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

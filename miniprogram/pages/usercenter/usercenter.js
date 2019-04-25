@@ -1,13 +1,18 @@
 // pages/usercenter/usercenter.js
 Page({
-
+  onclick:function(e){
+    wx.navigateTo({
+      url: '../managerPage/managerPage',
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
     openid: '',
     teacher_num:'',
-    teacher_name:''
+    teacher_name:'',
+    flag:true
   },
 
   /**
@@ -16,12 +21,14 @@ Page({
   onLoad: function () {
     var app = getApp();
     var openid = app.globalData.openid;
+    var flag = app.globalData.flag;
     var teacher_num = app.globalData.teacher_num;
     var teacher_name = app.globalData.teacher_name;
     this.setData({
       openid: openid,
       teacher_num :teacher_num,
-      teacher_name : teacher_name
+      teacher_name : teacher_name,
+      flag :flag
     })
   },
 
